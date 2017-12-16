@@ -1,0 +1,14 @@
+/* CSS Document */
+body{margin:0;font:14px verdana}
+/*.divBody{height:900px;overflow-x:hiden;overflow-y:auto}*/
+
+#leftDiv{width:auto;padding:10px;text-align:left;border:solid 1px #000;float:left}
+#rightDiv{width:auto;padding:10px;text-align:left;border:solid 1px #000;float:left}
+
+.registTable{width:100%;height:200px;padding:20px 0}
+.registTable td{padding:2px 5px;border:1px solid #999;text-align:left}
+
+.spawnTable{width:100%;height:400px;padding:20px 0}
+.spawnTable td,th{padding:2px 5px;width:100px}
+.spawnTable th{text-align:center;background:#DDEFF9}
+.spawnTable td{background:#FFF}

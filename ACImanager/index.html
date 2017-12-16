@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新用户注册</title>
+<link href="common.css" rel="stylesheet" type="text/css" />
+<script src="lib/jquery.js"></script>
+<script>
+$(function(){
+	$("#registForm").submit(function(){
+		$.ajax({
+			url:"registe.asp",
+			data:$("#registForm").serialize(),
+			type:"POST",
+			success:function(msg){
+				$("#result").html(msg);	
+			}
+		});
+		return false;	//防止页面刷新
+	})
+})
+</script>
+</head>
+
+<body>
+<div class="divBody">
+  <div id='userInfo' class="registTable"> 
+    <form id="registForm" name="registForm">
+    <table width="293" border="0" cellspacing="1" cellpadding="0" align="center" id="frmUser">
+      <tr>
+        <td width="104">姓名：</td>
+        <td width="186"><input type="text" name="Name" id="Name" /></td>
+      </tr>
+      <tr>
+        <td>推荐人：</td>
+        <td><input type="text" name="introducer" id="introducer" /></td>
+      </tr>
+      <tr>
+        <td>推荐人节点：</td>
+        <td><input type="text" name="nodeID" id="nodeID" /></td>
+      </tr>
+      <tr>
+        <td>账号：</td>
+        <td><input type="text" name="userID" id="userID" /></td>
+      </tr>
+      <tr>
+        <td>密码：</td>
+        <td><input type="text" name="pwd" id="pwd" /></td>
+      </tr>
+      <tr>
+        <td>电话：</td>
+        <td><input type="text" name="tel" id="tel" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" style='text-align:center'><input type="submit" name="button" id="spawn" value="生成清单" /></td>
+      </tr>
+    </table>
+    </form>
+ </div>
+  <div id='result' class="spawnTable"></div>
+</div>
+</body>
+</html>

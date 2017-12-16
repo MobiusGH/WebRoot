@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="http://www.titan24.com/scripts/jquery-1.2.6.pack.js"></script> 
+<style type="text/css">
+*{ margin:0; padding:0;}
+body{ background:#eee;}
+.info{ width:600px; min-height:120px; _height:120px; line-height:120px; border:8px solid #f60; margin:40px auto; background:#fff; text-align:center; font-size:36px; font-weight:900; font-family:Arial, Helvetica, sans-serif; color:#d00;}
+</style>
+<script type="text/javascript">    
+/* <![CDATA[ */
+$(document).ready(function(){
+    var bro=$.browser;
+    var binfo="";
+    if(bro.msie) {binfo="Microsoft Internet Explorer "+bro.version;}
+    if(bro.mozilla) {binfo="Mozilla Firefox "+bro.version;}
+    if(bro.safari) {binfo="Apple Safari "+bro.version;}
+    if(bro.opera) {binfo="Opera "+bro.version;}
+    alert(binfo);
+    $("#browser").html(binfo);
+})
+/* ]]> */   
+</script>
+</head>
+ 
+<body>
+<div id="browser" class="info">
+Browser Info
+</div>
+</body>
+</html>
